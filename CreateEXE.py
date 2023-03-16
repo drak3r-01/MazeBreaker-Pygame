@@ -1,7 +1,7 @@
 from cx_Freeze import setup, Executable
 
 executables = [
-    Executable(script="__main__.py", icon="./CODE/ASSET/LOGO.ico", base="Win32GUI")
+    Executable(script="./__main__.py", icon="./CODE/ASSET/LOGO.ico", base="Win32GUI")
 ]
 
 buildOptions = dict(
