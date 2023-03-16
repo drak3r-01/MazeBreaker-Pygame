@@ -1,0 +1,1532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>Run_game API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>Run_game</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import pygame
+import pickle
+#from .Maze import *
+
+pygame.init()
+pygame.font.init()
+pygame.mixer.init()
+
+# Fonction
+
+def get_input(score) -&gt; str:
+    &#34;&#34;&#34;
+    Fonction permetant de détecter les entrées faites via un périphérique par l&#39;utilisateur.
+    &#34;&#34;&#34;
+    fin = False
+    name = &#34;&#34;
+
+    while not fin:
+
+        # Parcours des events
+        for i in pygame.event.get():
+
+            if i.type == pygame.KEYDOWN:
+
+                if i.key == pygame.K_a:
+                    name += &#34;A&#34;
+                if i.key == pygame.K_b:
+                    name += &#34;B&#34;
+                if i.key == pygame.K_c:
+                    name += &#34;C&#34;
+                if i.key == pygame.K_d:
+                    name += &#34;D&#34;
+                if i.key == pygame.K_e:
+                    name += &#34;E&#34;
+                if i.key == pygame.K_f:
+                    name += &#34;F&#34;
+                if i.key == pygame.K_g:
+                    name += &#34;G&#34;
+                if i.key == pygame.K_h:
+                    name += &#34;H&#34;
+                if i.key == pygame.K_i:
+                    name += &#34;I&#34;
+                if i.key == pygame.K_j:
+                    name += &#34;J&#34;
+                if i.key == pygame.K_k:
+                    name += &#34;K&#34;
+                if i.key == pygame.K_l:
+                    name += &#34;L&#34;
+                if i.key == pygame.K_m:
+                    name += &#34;M&#34;
+                if i.key == pygame.K_n:
+                    name += &#34;N&#34;
+                if i.key == pygame.K_o:
+                    name += &#34;O&#34;
+                if i.key == pygame.K_p:
+                    name += &#34;P&#34;
+                if i.key == pygame.K_q:
+                    name += &#34;Q&#34;
+                if i.key == pygame.K_r:
+                    name += &#34;R&#34;
+                if i.key == pygame.K_s:
+                    name += &#34;S&#34;
+                if i.key == pygame.K_t:
+                    name += &#34;T&#34;
+                if i.key == pygame.K_u:
+                    name += &#34;U&#34;
+                if i.key == pygame.K_v:
+                    name += &#34;V&#34;
+                if i.key == pygame.K_w:
+                    name += &#34;W&#34;
+                if i.key == pygame.K_x:
+                    name += &#34;X&#34;
+                if i.key == pygame.K_y:
+                    name += &#34;Y&#34;
+                if i.key == pygame.K_z:
+                    name += &#34;Z&#34;
+
+                if i.key == pygame.K_BACKSPACE:
+                    name = name[:-1]
+
+                if i.key == pygame.K_RETURN:
+                    fin = True
+                    break
+            if i.type == pygame.QUIT:
+                pygame.quit()
+                exit()
+
+        name = name[:10]
+        fenetre.blit(img_fond, (0, 0))
+        fenetre.blit(img_nom_resize, (fenetre.get_rect().center[0] - 370, fenetre.get_rect().center[1] - 318))
+        fenetre.blit(font2.render(&#34;Maze Breaker DELUXE&#34;, True, (255, 200, 0)), (fenetre.get_rect().center[0] - 298, fenetre.get_rect().center[1] - 300))
+
+        fenetre.blit(pygame.transform.scale(img_titre, (900, 100)), (fenetre.get_rect().center[0] - 450, fenetre.get_rect().center[1] - 67))
+        fenetre.blit(font2.render(&#34;New High Score  &#34; + str(score), True, &#34;darkblue&#34;), (fenetre.get_rect().center[0] - font2.render(&#34;New High Score  &#34; + str(score), True, &#34;gold&#34;, &#34;lightskyblue&#34;).get_rect()[2] / 2, fenetre.get_rect().center[1] - 50))
+
+        fenetre.blit(pygame.transform.scale(img_titre, (424, 100)), (fenetre.get_rect().center[0] - 212, fenetre.get_rect().center[1] + 57))
+        if name:
+            fenetre.blit(font2.render(name, True, &#34;black&#34;), (fenetre.get_rect().center[0] - font2.render(name, True, &#34;gold&#34;, &#34;lightskyblue&#34;).get_rect()[2] / 2, fenetre.get_rect().center[1] + 75))
+        else:
+            fenetre.blit(font2.render(&#34;Enter Name&#34;, True, &#34;black&#34;), (fenetre.get_rect().center[0] - font2.render(&#34;Enter Name&#34;, True, &#34;gold&#34;, &#34;lightskyblue&#34;).get_rect()[2] / 2, fenetre.get_rect().center[1] + 75))
+        pygame.display.update()
+    return name[:9]
+
+
+def get_wallcoord_forlaby(maze : object, nb_ligne: int, nb_colonne: int) -&gt; list:
+    &#34;&#34;&#34;
+    Fonction permettant de modifier les coordonnées pour tout les murs (du à l&#39;affichage en sprite du jeu) en retournant la liste de tout les murs modifiés.
+
+    Retour:
+        `list` : liste de tout les nouvelles coordonnées des murs.
+    &#34;&#34;&#34;
+    # Ajout des murs
+    murs = maze.get_walls()
+    new_cord = []
+
+    # Transformation des coordonées pour convenir au tableau
+    for mur in murs:
+        temp1 = 0
+        temp2 = 0
+        temp3 = 0
+        temp4 = 0
+        if mur[0][0] == 0:
+            temp1 = mur[0][0] + 1
+        else:
+            temp1 = mur[0][0] * 2 + 1
+
+        if mur[0][1] == 0:
+            temp2 = mur[0][1] + 1
+        else:
+            temp2 = mur[0][1] * 2 + 1
+
+        if mur[1][0] == 0:
+            temp3 = mur[1][0] + 1
+        else:
+            temp3 = mur[1][0] * 2 + 1
+
+        if mur[1][1] == 0:
+            temp4 = mur[1][1] + 1
+        else:
+            temp4 = mur[1][1] * 2 + 1
+
+        new_cord.append(((temp1, temp2), (temp3, temp4)))
+
+    # Création des coordonnées des nouveaux murs
+    new_murs = []
+    for mur in new_cord:
+        if mur[0][0] != mur[1][0]:
+            if mur[0][0] &lt; mur[1][0]:
+                new_murs.append((mur[0][0] + 1, mur[0][1]))
+            else:
+                new_murs.append((mur[1][0] + 1, mur[1][1]))
+        else:
+            if mur[0][1] &lt; mur[1][1]:
+                new_murs.append((mur[0][0], mur[0][1] + 1))
+            else:
+                new_murs.append((mur[1][0], mur[1][1] + 1))
+
+    for ligne in range(2, nb_ligne * 2, 2):
+        for colonne in range(2, nb_colonne * 2, 2):
+            new_murs.append((ligne, colonne))
+
+    return new_murs
+
+
+def addDiamond(murs_list: list, nb_ligne: int, nb_colone: int, nbDiamond: int, nbPetitDiamond: int) -&gt; list:
+    &#34;&#34;&#34;
+    Fonction permettant de placer des diamants (petit ou grand bonus rapportant plus ou moins de points) sur la grille du labyrinthe.
+
+    Paramètres:
+        - `murs_list` (list) : liste des murs du labyrinthe.
+        - `nb_ligne` (int) : nombre de ligne du labyrinthe.
+        - `nb_colone` (int) : nombre de colonnes du labyrithe.
+        - `nbDiamond` (int) : nombre de grands diamants à placer sur la grille du labyrithe.
+        - `nbPetitDiamond` (int) : nombre de petits diamants à placer sur la grille du labyrithe.
+    &#34;&#34;&#34;
+    murs = murs_list
+    listPetit = []
+    listGros = []
+    listCase = [(i, j) for i in range(1, nb_ligne * 2 - 1, 2) for j in range(1, nb_colone * 2 - 1, 2)]
+    for i in range(nbDiamond):
+        while True:
+            coord = listCase[randint(0, len(listCase) - 1)]
+            if coord not in murs and coord != (1, 1):
+                listGros.append(coord)
+                listCase.pop(listCase.index(coord))
+                break
+    for i in range(nbPetitDiamond):
+        while True:
+            coord = listCase[randint(0, len(listCase) - 1)]
+            if coord not in murs and coord != (1, 1):
+                listPetit.append(coord)
+                listCase.pop(listCase.index(coord))
+                break
+
+    return [listGros, listPetit]
+
+def display_score(nb_ligne, score: int) -&gt; None:
+    &#34;&#34;&#34;
+    Fonction permettant de calculer et afficher le score du joueur.
+    &#34;&#34;&#34;
+    strt = &#34;Score : &#34; + str(score) + &#34;    |    Time : &#34; + str((round((pygame.time.get_ticks() - start_clock) / 1000, 2)))
+    fenetre.blit(font.render(strt, True, &#34;white&#34;, &#34;goldenrod3&#34;), (0, 26 * (nb_ligne * 2 - 1) + 95))
+    pygame.display.update()
+    return
+
+def display_laby(nb_lignes: int, nb_colone: int, murlist, coord: tuple, direction_choix: int, list_diamond: list) -&gt; None:
+    &#34;&#34;&#34;
+    Fonction permettant de modifier le labyrinthe généré en labyrinthe prêt à être affiché.
+    &#34;&#34;&#34;
+    Diamonds = list_diamond
+    murs = murlist
+    separation_vertical = 0
+
+    fenetre.blit(img_fond, (0, 0))
+
+    # Création du labyrinthe sans murs
+    for ligne in range(nb_lignes + 1):
+        separation_largeur = 0
+
+        for colonne in range(nb_colone + 1):
+
+            # Dessin du plateau vide
+            if ligne == 0:
+                fenetre.blit(img_murbord_resize, (separation_largeur, separation_vertical))
+
+            elif ligne == nb_lignes:
+
+                fenetre.blit(img_sol_resize, (separation_largeur, separation_vertical - 51 / resize + 22))
+                fenetre.blit(img_murbord_resize, (separation_largeur, separation_vertical - 51 / resize))
+
+            elif colonne == 0 or colonne == nb_colone:
+                fenetre.blit(img_murbord_resize, (separation_largeur, separation_vertical - 51 / resize))
+
+            else:
+                fenetre.blit(img_sol_resize, (separation_largeur, separation_vertical))
+
+            # Ajout du personnage
+            if (ligne, colonne) == coord:
+                fenetre.blit(direction[direction_choix], (separation_largeur, separation_vertical - 20))
+
+            # Ajout des diamonds
+            if (ligne, colonne) in Diamonds[0]:
+                fenetre.blit(img_diamond_resize, (separation_largeur, separation_vertical - 25))
+            elif (ligne, colonne) in Diamonds[1]:
+                fenetre.blit(img_petitdiamond_resize, (separation_largeur, separation_vertical - 25))
+
+            # Ajout fin
+            if (ligne, colonne) == (nb_lignes - 1, nb_colone - 1):
+                fenetre.blit(img_fin_resize, (separation_largeur, separation_vertical - 20))
+
+            # Ajout des murs internes
+            if (ligne, colonne) in murs:
+                fenetre.blit(img_mur_resize, (separation_largeur, separation_vertical - 14))
+            elif colonne % 2 == 0 and colonne != 0 and colonne - 1 != nb_colone - 1 and ligne % 2 == 0 and ligne != 0 and ligne - 1 != nb_lignes - 1:
+                fenetre.blit(img_mur_resize, (separation_largeur, separation_vertical - 14))
+
+            separation_largeur += 68 / resize
+
+        if ligne == 0 or ligne == nb_lignes:
+            separation_vertical += 98 / resize
+        else:
+            separation_vertical += 52 / resize
+
+    return
+
+def start_one_laby_game(ligne: int, colonne: int, score: int, start_clock: int) -&gt; tuple:
+    &#34;&#34;&#34;
+    Fonction permettant la gestion des contrôles et des collisions pendant une partie.
+    &#34;&#34;&#34;
+    nb_ligne = ligne
+    nb_colone = colonne
+    coord_joueur = (1, 1)
+    diamond_value = 5000
+    petit_diamond_value = 2500
+
+    maze = Maze.gen_wilson(None, nb_ligne, nb_colone)
+    murs = get_wallcoord_forlaby(maze, nb_ligne, nb_colone)
+    Diamonds = addDiamond(murs, nb_ligne, nb_colone, 40, 70)
+
+    display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 2, Diamonds)
+    pygame.display.update()
+
+
+    # Mouvement de joueur
+    fin = False
+    while not fin:
+        display_score(nb_ligne, score)
+
+        # Parcours des events
+        for i in pygame.event.get():
+
+            # Si une touche presser
+            if i.type == pygame.KEYDOWN:
+
+                # Si fleche UP presser
+                if i.key == pygame.K_UP:
+                    if coord_joueur[0] != 1 and (coord_joueur[0] - 1, coord_joueur[1]) not in murs:
+                        coord_joueur = (coord_joueur[0] - 1, coord_joueur[1])
+
+                        # Gestion des diamonds
+                        if coord_joueur in Diamonds[0]:
+                            score += diamond_value
+                            Diamonds[0].pop(Diamonds[0].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+                        elif coord_joueur in Diamonds[1]:
+                            score += petit_diamond_value
+                            Diamonds[1].pop(Diamonds[1].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+
+                        # Gestion de la fin
+                        if coord_joueur == (nb_ligne * 2 - 1, nb_colone * 2 - 1):
+                            pygame.mixer.Sound.play(sound_fin)
+                            fin = True
+                            break
+
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 0, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+                    else:
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 0, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+
+                # Si fleche droite presser
+                if i.key == pygame.K_RIGHT:
+                    if coord_joueur[1] != nb_colone * 2 - 1 and (coord_joueur[0], coord_joueur[1] + 1) not in murs:
+                        coord_joueur = (coord_joueur[0], coord_joueur[1] + 1)
+
+                        # Gestion des diamonds
+                        if coord_joueur in Diamonds[0]:
+                            score += diamond_value
+                            Diamonds[0].pop(Diamonds[0].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+                        elif coord_joueur in Diamonds[1]:
+                            score += petit_diamond_value
+                            Diamonds[1].pop(Diamonds[1].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+
+                        # Gestion de la fin
+                        if coord_joueur == (nb_ligne * 2 - 1, nb_colone * 2 - 1):
+                            pygame.mixer.Sound.play(sound_fin)
+                            fin = True
+                            break
+
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 1, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+                    else:
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 1, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+
+                # Si fleche bas presser
+                if i.key == pygame.K_DOWN:
+                    if coord_joueur[0] + 1 != nb_ligne * 2 and (coord_joueur[0] + 1, coord_joueur[1]) not in murs:
+                        coord_joueur = (coord_joueur[0] + 1, coord_joueur[1])
+
+                        # Gestion des diamonds
+                        if coord_joueur in Diamonds[0]:
+                            score += diamond_value
+                            Diamonds[0].pop(Diamonds[0].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+                        elif coord_joueur in Diamonds[1]:
+                            score += petit_diamond_value
+                            Diamonds[1].pop(Diamonds[1].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+
+                        # Gestion de la fin
+                        if coord_joueur == (nb_ligne * 2 - 1, nb_colone * 2 - 1):
+                            pygame.mixer.Sound.play(sound_fin)
+                            fin = True
+                            break
+
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 2, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+                    else:
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 2, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+
+                # Si fleche gauche presser
+                if i.key == pygame.K_LEFT:
+                    if coord_joueur[1] != 1 and (coord_joueur[0], coord_joueur[1] - 1) not in murs:
+                        coord_joueur = (coord_joueur[0], coord_joueur[1] - 1)
+
+                        # Gestion des diamonds
+                        if coord_joueur in Diamonds[0]:
+                            score += diamond_value
+                            Diamonds[0].pop(Diamonds[0].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+                        elif coord_joueur in Diamonds[1]:
+                            score += petit_diamond_value
+                            Diamonds[1].pop(Diamonds[1].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+
+                        # Gestion de la fin
+                        if coord_joueur == (nb_ligne * 2 - 1, nb_colone * 2 - 1):
+                            pygame.mixer.Sound.play(sound_fin)
+                            fin = True
+                            break
+
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 3, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+                    else:
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 3, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+
+            display_score(nb_ligne, score)
+
+        # Permet de quitter le jeu
+            if i.type == pygame.QUIT:
+                pygame.quit()
+                exit()
+
+    return (score, (pygame.time.get_ticks() - start_clock) / 1000)
+
+def display_menu(choix: bool) -&gt; None:
+    &#34;&#34;&#34;
+    Fonction permettant la gestion du menu principal du jeu.
+    &#34;&#34;&#34;
+    fenetre.blit(img_fond, (0, 0))
+    fenetre.blit(img_logo_resize, (fenetre.get_rect().center[0] - 700, fenetre.get_rect().center[1] - 200))
+    fenetre.blit(img_start_resize, (fenetre.get_rect().center[0] - 128, fenetre.get_rect().center[1] - 100))
+    fenetre.blit(img_quit_resize, (fenetre.get_rect().center[0] - 128, fenetre.get_rect().center[1] + 30))
+
+    fenetre.blit(img_nom_resize, (fenetre.get_rect().center[0] - 370, fenetre.get_rect().center[1] - 318))
+    fenetre.blit(font2.render(&#34;Maze Breaker DELUXE&#34;, True, (255, 200, 0)), (fenetre.get_rect().center[0] - 298, fenetre.get_rect().center[1] - 300))
+
+
+    # Display high player
+    central = pygame.transform.scale(img_titre, (430, 50))
+    fenetre.blit(central, (fenetre.get_rect().center[0] + 267, fenetre.get_rect().center[1] - 160))
+    fenetre.blit(font.render(&#34;Top Player :&#34;, True, &#34;darkblue&#34;), (fenetre.get_rect().center[0] - font.render(&#34;Top Player :&#34;, True, &#34;gold&#34;).get_rect()[2] / 2 + 482, fenetre.get_rect().center[1] - 147))
+
+
+    central = pygame.transform.scale(img_titre, (430, 50))
+    player = str(higth_player[list(higth_player)[0]]) + &#34;: &#34; + str(list(higth_player)[0])
+    fenetre.blit(central, (fenetre.get_rect().center[0] + 267, fenetre.get_rect().center[1] - 70))
+    fenetre.blit(font.render(player, True, &#34;red&#34;), (fenetre.get_rect().center[0] - font.render(player, True, &#34;red&#34;).get_rect()[2] / 2 + 482, fenetre.get_rect().center[1] - 57))
+
+
+
+    player = str(higth_player[list(higth_player)[1]]) + &#34;: &#34; + str(list(higth_player)[1])
+    fenetre.blit(central, (fenetre.get_rect().center[0] + 267, fenetre.get_rect().center[1]))
+    fenetre.blit(font.render(player, True, &#34;yellow&#34;), (fenetre.get_rect().center[0] - font.render(player, True, &#34;yellow&#34;).get_rect()[2] / 2 + 482, fenetre.get_rect().center[1] + 13))
+
+
+
+
+    player = str(higth_player[list(higth_player)[2]]) + &#34;: &#34; + str(list(higth_player)[2])
+    fenetre.blit(central, (fenetre.get_rect().center[0] + 267, fenetre.get_rect().center[1] + 70))
+    fenetre.blit(font.render(player, True, &#34;lime&#34;), (fenetre.get_rect().center[0] - font.render(player, True, &#34;lime&#34;).get_rect()[2] / 2 + 482, fenetre.get_rect().center[1] + 83))
+
+
+    if choix:
+        fenetre.blit(img_fleche_resize, (fenetre.get_rect().center[0] - 250, fenetre.get_rect().center[1] - 100))
+    else:
+        fenetre.blit(img_fleche_resize, (fenetre.get_rect().center[0] - 250, fenetre.get_rect().center[1] + 30))
+
+    pygame.display.update()
+    return
+
+def display_new(score: int) -&gt; str:
+    &#34;&#34;&#34;
+    Fonction permettant la gestion de l&#39;écran de saisie du nouveau meilleur record (en fin de partie).
+    &#34;&#34;&#34;
+    fenetre.blit(img_fond, (0, 0))
+    fenetre.blit(img_nom_resize, (fenetre.get_rect().center[0] - 370, fenetre.get_rect().center[1] - 318))
+    fenetre.blit(font2.render(&#34;Maze Breaker DELUXE&#34;, True, (255, 200, 0)), (fenetre.get_rect().center[0] - 298, fenetre.get_rect().center[1] - 300))
+
+    fenetre.blit(img_nom_resize, (fenetre.get_rect().center[0] - 200, fenetre.get_rect().center[1] - 318))
+    fenetre.blit(font2.render(&#34;New High Score  &#34; + str(score), True, &#34;gold&#34;, &#34;lightskyblue&#34;), (fenetre.get_rect().center[0] - 298, fenetre.get_rect().center[1] - 200))
+    pygame.display.update()
+    return get_input(score)
+    
+
+def display_end(score: int) -&gt; None:
+    &#34;&#34;&#34;
+    Fonction permettant la gestion de l&#39;écran de fin de partie.
+    &#34;&#34;&#34;
+    fenetre.blit(img_fond, (0, 0))
+    fenetre.blit(img_nom_resize, (fenetre.get_rect().center[0] - 370, fenetre.get_rect().center[1] - 318))
+    fenetre.blit(font2.render(&#34;Maze Breaker DELUXE&#34;, True, (255, 200, 0)), (fenetre.get_rect().center[0] - 298, fenetre.get_rect().center[1] - 300))
+
+    fenetre.blit(pygame.transform.scale(img_titre, (700, 100)), (fenetre.get_rect().center[0] - 350, fenetre.get_rect().center[1] - 87))
+    fenetre.blit(font2.render(&#34;GAME OVER&#34;, True, &#34;red&#34;), (fenetre.get_rect().center[0] - font2.render(&#34;GAME OVER&#34;, True, &#34;gold&#34;).get_rect()[2] / 2, fenetre.get_rect().center[1] - 70))
+
+    fenetre.blit(pygame.transform.scale(img_titre, (700, 100)), (fenetre.get_rect().center[0] - 350, fenetre.get_rect().center[1] + 50))
+    fenetre.blit(font.render(&#34;Your Score : &#34; + str(score), True, &#34;black&#34;), (fenetre.get_rect().center[0] - font.render(&#34;Your Score : &#34; + str(score), True, &#34;gold&#34;, &#34;lightskyblue&#34;).get_rect()[2] / 2, fenetre.get_rect().center[1] + 88))
+    pygame.display.update()
+
+    time = pygame.time.get_ticks() / 1000 + 7
+    while pygame.time.get_ticks() / 1000 &lt;= time:
+        for i in pygame.event.get():
+            if i.type == pygame.QUIT:
+                pygame.quit()
+                exit()
+
+def game():
+    &#34;&#34;&#34;
+    Fonction permettant la gestion de la fenêtre graphique du jeu.
+    &#34;&#34;&#34;
+    nb_ligne = 12
+    nb_colonne = 22
+
+    global resize
+    resize = 2
+
+    global fenetre
+    fenetre = pygame.display.set_mode((34 * (nb_colonne * 2 + 1), 26 * (nb_ligne * 2 - 1) + 94 + 35))
+    pygame.display.set_caption(&#39;Maze Breaker DELUXE&#39;)
+    logo = pygame.image.load(&#39;./CODE/ASSET/LOGO.png&#39;)
+    pygame.display.set_icon(logo)
+
+    # Importation police
+    global font
+    font = pygame.font.Font(&#39;./CODE/ASSET/font.ttf&#39;, 32)
+    global font2
+    font2 = pygame.font.Font(&#39;./CODE/ASSET/titre.ttf&#39;, 64)
+
+    # Importation des img
+    img_sol = pygame.image.load(&#34;./CODE/ASSET/sol.png&#34;).convert_alpha()
+    img_murbord = pygame.image.load(&#34;./CODE/ASSET/murbord.png&#34;).convert_alpha()
+    img_mur = pygame.image.load(&#34;./CODE/ASSET/mur.png&#34;).convert_alpha()
+
+    img_joueurbas = pygame.image.load(&#34;./CODE/ASSET/herobas.png&#34;).convert_alpha()
+    img_joueurdroite = pygame.image.load(&#34;./CODE/ASSET/herodroite.png&#34;).convert_alpha()
+    img_joueurhaut = pygame.image.load(&#34;./CODE/ASSET/herohaut.png&#34;).convert_alpha()
+    img_joueurgauche = pygame.image.load(&#34;./CODE/ASSET/herogauche.png&#34;).convert_alpha()
+
+    img_petitdiamond = pygame.image.load(&#34;./CODE/ASSET/petitdiamond.png&#34;)
+    img_diamond = pygame.image.load(&#34;./CODE/ASSET/diamond.png&#34;)
+
+    img_fin = pygame.image.load(&#34;./CODE/ASSET/exit.png&#34;)
+
+    global img_fond
+    img_fond = pygame.image.load(&#34;./CODE/ASSET/fond.png&#34;)
+
+    img_start = pygame.image.load(&#34;./CODE/ASSET/start.png&#34;)
+    img_quit = pygame.image.load(&#34;./CODE/ASSET/quit.png&#34;)
+    img_fleche = pygame.image.load(&#34;./CODE/ASSET/fleche.png&#34;)
+    global img_titre
+    img_titre = pygame.image.load(&#34;./CODE/ASSET/titre.png&#34;)
+
+
+    # Re dimension
+    global img_sol_resize
+    img_sol_resize = pygame.transform.scale(img_sol, (69/resize, 98/resize))
+    global img_murbord_resize
+    img_murbord_resize = pygame.transform.scale(img_murbord, (69 / resize, 98 / resize))
+    global img_mur_resize
+    img_mur_resize = pygame.transform.scale(img_mur, (69 / resize, 66 / resize))
+
+    img_joueurbas_resize = pygame.transform.scale(img_joueurbas, (69 / resize, 69 / resize))
+    img_joueurdroite_resize = pygame.transform.scale(img_joueurdroite, (69 / resize, 69 / resize))
+    img_joueurhaut_resize = pygame.transform.scale(img_joueurhaut, (69 / resize, 69 / resize))
+    img_joueurgauche_resize = pygame.transform.scale(img_joueurgauche, (69 / resize, 69 / resize))
+
+    global img_petitdiamond_resize
+    img_petitdiamond_resize = pygame.transform.scale(img_petitdiamond, (69 / resize, 69 / resize))
+    global img_diamond_resize
+    img_diamond_resize = pygame.transform.scale(img_diamond, (69 / resize, 69 / resize))
+
+    global img_fin_resize
+    img_fin_resize = pygame.transform.scale(img_fin, (69 / resize, 69 / resize))
+
+    global img_logo_resize
+    img_logo_resize = pygame.transform.scale(logo, (400, 400))
+    global img_start_resize
+    img_start_resize = pygame.transform.scale(img_start, (256, 112))
+    global img_quit_resize
+    img_quit_resize = pygame.transform.scale(img_quit, (256, 112))
+    global img_fleche_resize
+    img_fleche_resize = pygame.transform.scale(img_fleche, (112, 112))
+    global img_nom_resize
+    img_nom_resize = pygame.transform.scale(img_titre, (740, 100))
+
+
+    # Création des directions
+    global direction
+    direction = (img_joueurhaut_resize, img_joueurdroite_resize, img_joueurbas_resize, img_joueurgauche_resize)
+
+    # Importation des sons
+    global sound_fin
+    sound_fin = pygame.mixer.Sound(&#34;./CODE/ASSET/finlevel.wav&#34;)
+    global sound_diamond
+    sound_diamond = pygame.mixer.Sound(&#34;./CODE/ASSET/diamond.wav&#34;)
+    score = 0
+
+    global sound_menu
+    sound_menu = pygame.mixer.Sound(&#34;./CODE/ASSET/menu_click.wav&#34;)
+    global sound_menu2
+    sound_menu2 = pygame.mixer.Sound(&#34;./CODE/ASSET/menu_click2.wav&#34;)
+
+    global higth_player
+    # Lancement Jeu
+    while True:
+        # display_end(score)
+        &#34;&#34;&#34;
+        # Reset Save
+        higth_player = {3: &#34;Player 1&#34;, 2: &#34;Player 2&#34;, 1: &#34;Player 3&#34;}
+        with open(&#39;./CODE/Save.pkl&#39;, &#39;wb&#39;) as f:
+            pickle.dump(higth_player, f)
+        &#34;&#34;&#34;
+
+        # Lecture de la save
+        with open(&#39;./CODE/Save.pkl&#39;, &#39;rb&#39;) as f:
+            higth_player = pickle.load(f)
+        higth_player = dict(sorted(higth_player.items(), reverse = True))
+
+        # Gestion de la save
+        print(higth_player)
+        for testscore in higth_player.copy():
+            if score &gt; testscore:
+                higth_player[score] = display_new(score)
+                higth_player = dict(sorted(higth_player.items(), reverse=True))
+                higth_player.pop(list(higth_player)[3])
+                break
+        higth_player = dict(sorted(higth_player.items(), reverse=True))
+
+        # Écriture de la save
+        with open(&#39;./CODE/Save.pkl&#39;, &#39;wb&#39;) as f:
+            pickle.dump(higth_player, f)
+        print(higth_player)
+
+        pygame.mixer.music.load(&#34;./CODE/ASSET/music_menu.mp3&#34;)
+        pygame.mixer.music.set_volume(0.3)
+        pygame.mixer.music.play(-1)
+
+        # Lancement menu
+        choix = True
+        menu = True
+        while menu:
+            display_menu(choix)
+            for i in pygame.event.get():
+
+                if i.type == pygame.KEYDOWN:
+
+                    # Si fleche UP presser
+                    if i.key == pygame.K_UP or i.key == pygame.K_DOWN:
+                        choix = not choix
+                        pygame.mixer.Sound.play(sound_menu)
+
+                    if i.key == pygame.K_SPACE or i.key == pygame.K_RETURN:
+                        if choix:
+                            menu = False
+                            pygame.mixer.Sound.play(sound_menu2)
+                        else:
+                            pygame.quit()
+                            exit()
+
+                if i.type == pygame.QUIT:
+                    pygame.quit()
+                    exit()
+
+        # Début Partie
+
+        # Lancement de la musique
+        pygame.mixer.music.load(&#34;./CODE/ASSET/music_game.mp3&#34;)
+        pygame.mixer.music.set_volume(0.3)
+        pygame.mixer.music.play(-1)
+
+        # Fin importation
+
+        time = 0
+        score = 0
+        # Gestion du temps START
+        global start_clock
+        start_clock = pygame.time.get_ticks()
+        # Gestion de l&#39;enchainement de 3 platos
+        for i in range(5):
+            var_fin_plato = start_one_laby_game(nb_ligne, nb_colonne, score, start_clock)
+            score = var_fin_plato[0]
+            time = var_fin_plato[1]
+        print(score, time)
+        score = int(round(score - 5555.5 * time + 2000000, 0))
+        print(score, time)
+        # Fin partie
+        display_end(score)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="Run_game.addDiamond"><code class="name flex">
+<span>def <span class="ident">addDiamond</span></span>(<span>murs_list: list, nb_ligne: int, nb_colone: int, nbDiamond: int, nbPetitDiamond: int) ‑> list</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fonction permettant de placer des diamants (petit ou grand bonus rapportant plus ou moins de points) sur la grille du labyrinthe.</p>
+<h2 id="parametres">Paramètres</h2>
+<ul>
+<li><code>murs_list</code> (list) : liste des murs du labyrinthe.</li>
+<li><code>nb_ligne</code> (int) : nombre de ligne du labyrinthe.</li>
+<li><code>nb_colone</code> (int) : nombre de colonnes du labyrithe.</li>
+<li><code>nbDiamond</code> (int) : nombre de grands diamants à placer sur la grille du labyrithe.</li>
+<li><code>nbPetitDiamond</code> (int) : nombre de petits diamants à placer sur la grille du labyrithe.</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addDiamond(murs_list: list, nb_ligne: int, nb_colone: int, nbDiamond: int, nbPetitDiamond: int) -&gt; list:
+    &#34;&#34;&#34;
+    Fonction permettant de placer des diamants (petit ou grand bonus rapportant plus ou moins de points) sur la grille du labyrinthe.
+
+    Paramètres:
+        - `murs_list` (list) : liste des murs du labyrinthe.
+        - `nb_ligne` (int) : nombre de ligne du labyrinthe.
+        - `nb_colone` (int) : nombre de colonnes du labyrithe.
+        - `nbDiamond` (int) : nombre de grands diamants à placer sur la grille du labyrithe.
+        - `nbPetitDiamond` (int) : nombre de petits diamants à placer sur la grille du labyrithe.
+    &#34;&#34;&#34;
+    murs = murs_list
+    listPetit = []
+    listGros = []
+    listCase = [(i, j) for i in range(1, nb_ligne * 2 - 1, 2) for j in range(1, nb_colone * 2 - 1, 2)]
+    for i in range(nbDiamond):
+        while True:
+            coord = listCase[randint(0, len(listCase) - 1)]
+            if coord not in murs and coord != (1, 1):
+                listGros.append(coord)
+                listCase.pop(listCase.index(coord))
+                break
+    for i in range(nbPetitDiamond):
+        while True:
+            coord = listCase[randint(0, len(listCase) - 1)]
+            if coord not in murs and coord != (1, 1):
+                listPetit.append(coord)
+                listCase.pop(listCase.index(coord))
+                break
+
+    return [listGros, listPetit]</code></pre>
+</details>
+</dd>
+<dt id="Run_game.display_end"><code class="name flex">
+<span>def <span class="ident">display_end</span></span>(<span>score: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fonction permettant la gestion de l'écran de fin de partie.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def display_end(score: int) -&gt; None:
+    &#34;&#34;&#34;
+    Fonction permettant la gestion de l&#39;écran de fin de partie.
+    &#34;&#34;&#34;
+    fenetre.blit(img_fond, (0, 0))
+    fenetre.blit(img_nom_resize, (fenetre.get_rect().center[0] - 370, fenetre.get_rect().center[1] - 318))
+    fenetre.blit(font2.render(&#34;Maze Breaker DELUXE&#34;, True, (255, 200, 0)), (fenetre.get_rect().center[0] - 298, fenetre.get_rect().center[1] - 300))
+
+    fenetre.blit(pygame.transform.scale(img_titre, (700, 100)), (fenetre.get_rect().center[0] - 350, fenetre.get_rect().center[1] - 87))
+    fenetre.blit(font2.render(&#34;GAME OVER&#34;, True, &#34;red&#34;), (fenetre.get_rect().center[0] - font2.render(&#34;GAME OVER&#34;, True, &#34;gold&#34;).get_rect()[2] / 2, fenetre.get_rect().center[1] - 70))
+
+    fenetre.blit(pygame.transform.scale(img_titre, (700, 100)), (fenetre.get_rect().center[0] - 350, fenetre.get_rect().center[1] + 50))
+    fenetre.blit(font.render(&#34;Your Score : &#34; + str(score), True, &#34;black&#34;), (fenetre.get_rect().center[0] - font.render(&#34;Your Score : &#34; + str(score), True, &#34;gold&#34;, &#34;lightskyblue&#34;).get_rect()[2] / 2, fenetre.get_rect().center[1] + 88))
+    pygame.display.update()
+
+    time = pygame.time.get_ticks() / 1000 + 7
+    while pygame.time.get_ticks() / 1000 &lt;= time:
+        for i in pygame.event.get():
+            if i.type == pygame.QUIT:
+                pygame.quit()
+                exit()</code></pre>
+</details>
+</dd>
+<dt id="Run_game.display_laby"><code class="name flex">
+<span>def <span class="ident">display_laby</span></span>(<span>nb_lignes: int, nb_colone: int, murlist, coord: tuple, direction_choix: int, list_diamond: list) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fonction permettant de modifier le labyrinthe généré en labyrinthe prêt à être affiché.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def display_laby(nb_lignes: int, nb_colone: int, murlist, coord: tuple, direction_choix: int, list_diamond: list) -&gt; None:
+    &#34;&#34;&#34;
+    Fonction permettant de modifier le labyrinthe généré en labyrinthe prêt à être affiché.
+    &#34;&#34;&#34;
+    Diamonds = list_diamond
+    murs = murlist
+    separation_vertical = 0
+
+    fenetre.blit(img_fond, (0, 0))
+
+    # Création du labyrinthe sans murs
+    for ligne in range(nb_lignes + 1):
+        separation_largeur = 0
+
+        for colonne in range(nb_colone + 1):
+
+            # Dessin du plateau vide
+            if ligne == 0:
+                fenetre.blit(img_murbord_resize, (separation_largeur, separation_vertical))
+
+            elif ligne == nb_lignes:
+
+                fenetre.blit(img_sol_resize, (separation_largeur, separation_vertical - 51 / resize + 22))
+                fenetre.blit(img_murbord_resize, (separation_largeur, separation_vertical - 51 / resize))
+
+            elif colonne == 0 or colonne == nb_colone:
+                fenetre.blit(img_murbord_resize, (separation_largeur, separation_vertical - 51 / resize))
+
+            else:
+                fenetre.blit(img_sol_resize, (separation_largeur, separation_vertical))
+
+            # Ajout du personnage
+            if (ligne, colonne) == coord:
+                fenetre.blit(direction[direction_choix], (separation_largeur, separation_vertical - 20))
+
+            # Ajout des diamonds
+            if (ligne, colonne) in Diamonds[0]:
+                fenetre.blit(img_diamond_resize, (separation_largeur, separation_vertical - 25))
+            elif (ligne, colonne) in Diamonds[1]:
+                fenetre.blit(img_petitdiamond_resize, (separation_largeur, separation_vertical - 25))
+
+            # Ajout fin
+            if (ligne, colonne) == (nb_lignes - 1, nb_colone - 1):
+                fenetre.blit(img_fin_resize, (separation_largeur, separation_vertical - 20))
+
+            # Ajout des murs internes
+            if (ligne, colonne) in murs:
+                fenetre.blit(img_mur_resize, (separation_largeur, separation_vertical - 14))
+            elif colonne % 2 == 0 and colonne != 0 and colonne - 1 != nb_colone - 1 and ligne % 2 == 0 and ligne != 0 and ligne - 1 != nb_lignes - 1:
+                fenetre.blit(img_mur_resize, (separation_largeur, separation_vertical - 14))
+
+            separation_largeur += 68 / resize
+
+        if ligne == 0 or ligne == nb_lignes:
+            separation_vertical += 98 / resize
+        else:
+            separation_vertical += 52 / resize
+
+    return</code></pre>
+</details>
+</dd>
+<dt id="Run_game.display_menu"><code class="name flex">
+<span>def <span class="ident">display_menu</span></span>(<span>choix: bool) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fonction permettant la gestion du menu principal du jeu.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def display_menu(choix: bool) -&gt; None:
+    &#34;&#34;&#34;
+    Fonction permettant la gestion du menu principal du jeu.
+    &#34;&#34;&#34;
+    fenetre.blit(img_fond, (0, 0))
+    fenetre.blit(img_logo_resize, (fenetre.get_rect().center[0] - 700, fenetre.get_rect().center[1] - 200))
+    fenetre.blit(img_start_resize, (fenetre.get_rect().center[0] - 128, fenetre.get_rect().center[1] - 100))
+    fenetre.blit(img_quit_resize, (fenetre.get_rect().center[0] - 128, fenetre.get_rect().center[1] + 30))
+
+    fenetre.blit(img_nom_resize, (fenetre.get_rect().center[0] - 370, fenetre.get_rect().center[1] - 318))
+    fenetre.blit(font2.render(&#34;Maze Breaker DELUXE&#34;, True, (255, 200, 0)), (fenetre.get_rect().center[0] - 298, fenetre.get_rect().center[1] - 300))
+
+
+    # Display high player
+    central = pygame.transform.scale(img_titre, (430, 50))
+    fenetre.blit(central, (fenetre.get_rect().center[0] + 267, fenetre.get_rect().center[1] - 160))
+    fenetre.blit(font.render(&#34;Top Player :&#34;, True, &#34;darkblue&#34;), (fenetre.get_rect().center[0] - font.render(&#34;Top Player :&#34;, True, &#34;gold&#34;).get_rect()[2] / 2 + 482, fenetre.get_rect().center[1] - 147))
+
+
+    central = pygame.transform.scale(img_titre, (430, 50))
+    player = str(higth_player[list(higth_player)[0]]) + &#34;: &#34; + str(list(higth_player)[0])
+    fenetre.blit(central, (fenetre.get_rect().center[0] + 267, fenetre.get_rect().center[1] - 70))
+    fenetre.blit(font.render(player, True, &#34;red&#34;), (fenetre.get_rect().center[0] - font.render(player, True, &#34;red&#34;).get_rect()[2] / 2 + 482, fenetre.get_rect().center[1] - 57))
+
+
+
+    player = str(higth_player[list(higth_player)[1]]) + &#34;: &#34; + str(list(higth_player)[1])
+    fenetre.blit(central, (fenetre.get_rect().center[0] + 267, fenetre.get_rect().center[1]))
+    fenetre.blit(font.render(player, True, &#34;yellow&#34;), (fenetre.get_rect().center[0] - font.render(player, True, &#34;yellow&#34;).get_rect()[2] / 2 + 482, fenetre.get_rect().center[1] + 13))
+
+
+
+
+    player = str(higth_player[list(higth_player)[2]]) + &#34;: &#34; + str(list(higth_player)[2])
+    fenetre.blit(central, (fenetre.get_rect().center[0] + 267, fenetre.get_rect().center[1] + 70))
+    fenetre.blit(font.render(player, True, &#34;lime&#34;), (fenetre.get_rect().center[0] - font.render(player, True, &#34;lime&#34;).get_rect()[2] / 2 + 482, fenetre.get_rect().center[1] + 83))
+
+
+    if choix:
+        fenetre.blit(img_fleche_resize, (fenetre.get_rect().center[0] - 250, fenetre.get_rect().center[1] - 100))
+    else:
+        fenetre.blit(img_fleche_resize, (fenetre.get_rect().center[0] - 250, fenetre.get_rect().center[1] + 30))
+
+    pygame.display.update()
+    return</code></pre>
+</details>
+</dd>
+<dt id="Run_game.display_new"><code class="name flex">
+<span>def <span class="ident">display_new</span></span>(<span>score: int) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fonction permettant la gestion de l'écran de saisie du nouveau meilleur record (en fin de partie).</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def display_new(score: int) -&gt; str:
+    &#34;&#34;&#34;
+    Fonction permettant la gestion de l&#39;écran de saisie du nouveau meilleur record (en fin de partie).
+    &#34;&#34;&#34;
+    fenetre.blit(img_fond, (0, 0))
+    fenetre.blit(img_nom_resize, (fenetre.get_rect().center[0] - 370, fenetre.get_rect().center[1] - 318))
+    fenetre.blit(font2.render(&#34;Maze Breaker DELUXE&#34;, True, (255, 200, 0)), (fenetre.get_rect().center[0] - 298, fenetre.get_rect().center[1] - 300))
+
+    fenetre.blit(img_nom_resize, (fenetre.get_rect().center[0] - 200, fenetre.get_rect().center[1] - 318))
+    fenetre.blit(font2.render(&#34;New High Score  &#34; + str(score), True, &#34;gold&#34;, &#34;lightskyblue&#34;), (fenetre.get_rect().center[0] - 298, fenetre.get_rect().center[1] - 200))
+    pygame.display.update()
+    return get_input(score)</code></pre>
+</details>
+</dd>
+<dt id="Run_game.display_score"><code class="name flex">
+<span>def <span class="ident">display_score</span></span>(<span>nb_ligne, score: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fonction permettant de calculer et afficher le score du joueur.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def display_score(nb_ligne, score: int) -&gt; None:
+    &#34;&#34;&#34;
+    Fonction permettant de calculer et afficher le score du joueur.
+    &#34;&#34;&#34;
+    strt = &#34;Score : &#34; + str(score) + &#34;    |    Time : &#34; + str((round((pygame.time.get_ticks() - start_clock) / 1000, 2)))
+    fenetre.blit(font.render(strt, True, &#34;white&#34;, &#34;goldenrod3&#34;), (0, 26 * (nb_ligne * 2 - 1) + 95))
+    pygame.display.update()
+    return</code></pre>
+</details>
+</dd>
+<dt id="Run_game.game"><code class="name flex">
+<span>def <span class="ident">game</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fonction permettant la gestion de la fenêtre graphique du jeu.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def game():
+    &#34;&#34;&#34;
+    Fonction permettant la gestion de la fenêtre graphique du jeu.
+    &#34;&#34;&#34;
+    nb_ligne = 12
+    nb_colonne = 22
+
+    global resize
+    resize = 2
+
+    global fenetre
+    fenetre = pygame.display.set_mode((34 * (nb_colonne * 2 + 1), 26 * (nb_ligne * 2 - 1) + 94 + 35))
+    pygame.display.set_caption(&#39;Maze Breaker DELUXE&#39;)
+    logo = pygame.image.load(&#39;./CODE/ASSET/LOGO.png&#39;)
+    pygame.display.set_icon(logo)
+
+    # Importation police
+    global font
+    font = pygame.font.Font(&#39;./CODE/ASSET/font.ttf&#39;, 32)
+    global font2
+    font2 = pygame.font.Font(&#39;./CODE/ASSET/titre.ttf&#39;, 64)
+
+    # Importation des img
+    img_sol = pygame.image.load(&#34;./CODE/ASSET/sol.png&#34;).convert_alpha()
+    img_murbord = pygame.image.load(&#34;./CODE/ASSET/murbord.png&#34;).convert_alpha()
+    img_mur = pygame.image.load(&#34;./CODE/ASSET/mur.png&#34;).convert_alpha()
+
+    img_joueurbas = pygame.image.load(&#34;./CODE/ASSET/herobas.png&#34;).convert_alpha()
+    img_joueurdroite = pygame.image.load(&#34;./CODE/ASSET/herodroite.png&#34;).convert_alpha()
+    img_joueurhaut = pygame.image.load(&#34;./CODE/ASSET/herohaut.png&#34;).convert_alpha()
+    img_joueurgauche = pygame.image.load(&#34;./CODE/ASSET/herogauche.png&#34;).convert_alpha()
+
+    img_petitdiamond = pygame.image.load(&#34;./CODE/ASSET/petitdiamond.png&#34;)
+    img_diamond = pygame.image.load(&#34;./CODE/ASSET/diamond.png&#34;)
+
+    img_fin = pygame.image.load(&#34;./CODE/ASSET/exit.png&#34;)
+
+    global img_fond
+    img_fond = pygame.image.load(&#34;./CODE/ASSET/fond.png&#34;)
+
+    img_start = pygame.image.load(&#34;./CODE/ASSET/start.png&#34;)
+    img_quit = pygame.image.load(&#34;./CODE/ASSET/quit.png&#34;)
+    img_fleche = pygame.image.load(&#34;./CODE/ASSET/fleche.png&#34;)
+    global img_titre
+    img_titre = pygame.image.load(&#34;./CODE/ASSET/titre.png&#34;)
+
+
+    # Re dimension
+    global img_sol_resize
+    img_sol_resize = pygame.transform.scale(img_sol, (69/resize, 98/resize))
+    global img_murbord_resize
+    img_murbord_resize = pygame.transform.scale(img_murbord, (69 / resize, 98 / resize))
+    global img_mur_resize
+    img_mur_resize = pygame.transform.scale(img_mur, (69 / resize, 66 / resize))
+
+    img_joueurbas_resize = pygame.transform.scale(img_joueurbas, (69 / resize, 69 / resize))
+    img_joueurdroite_resize = pygame.transform.scale(img_joueurdroite, (69 / resize, 69 / resize))
+    img_joueurhaut_resize = pygame.transform.scale(img_joueurhaut, (69 / resize, 69 / resize))
+    img_joueurgauche_resize = pygame.transform.scale(img_joueurgauche, (69 / resize, 69 / resize))
+
+    global img_petitdiamond_resize
+    img_petitdiamond_resize = pygame.transform.scale(img_petitdiamond, (69 / resize, 69 / resize))
+    global img_diamond_resize
+    img_diamond_resize = pygame.transform.scale(img_diamond, (69 / resize, 69 / resize))
+
+    global img_fin_resize
+    img_fin_resize = pygame.transform.scale(img_fin, (69 / resize, 69 / resize))
+
+    global img_logo_resize
+    img_logo_resize = pygame.transform.scale(logo, (400, 400))
+    global img_start_resize
+    img_start_resize = pygame.transform.scale(img_start, (256, 112))
+    global img_quit_resize
+    img_quit_resize = pygame.transform.scale(img_quit, (256, 112))
+    global img_fleche_resize
+    img_fleche_resize = pygame.transform.scale(img_fleche, (112, 112))
+    global img_nom_resize
+    img_nom_resize = pygame.transform.scale(img_titre, (740, 100))
+
+
+    # Création des directions
+    global direction
+    direction = (img_joueurhaut_resize, img_joueurdroite_resize, img_joueurbas_resize, img_joueurgauche_resize)
+
+    # Importation des sons
+    global sound_fin
+    sound_fin = pygame.mixer.Sound(&#34;./CODE/ASSET/finlevel.wav&#34;)
+    global sound_diamond
+    sound_diamond = pygame.mixer.Sound(&#34;./CODE/ASSET/diamond.wav&#34;)
+    score = 0
+
+    global sound_menu
+    sound_menu = pygame.mixer.Sound(&#34;./CODE/ASSET/menu_click.wav&#34;)
+    global sound_menu2
+    sound_menu2 = pygame.mixer.Sound(&#34;./CODE/ASSET/menu_click2.wav&#34;)
+
+    global higth_player
+    # Lancement Jeu
+    while True:
+        # display_end(score)
+        &#34;&#34;&#34;
+        # Reset Save
+        higth_player = {3: &#34;Player 1&#34;, 2: &#34;Player 2&#34;, 1: &#34;Player 3&#34;}
+        with open(&#39;./CODE/Save.pkl&#39;, &#39;wb&#39;) as f:
+            pickle.dump(higth_player, f)
+        &#34;&#34;&#34;
+
+        # Lecture de la save
+        with open(&#39;./CODE/Save.pkl&#39;, &#39;rb&#39;) as f:
+            higth_player = pickle.load(f)
+        higth_player = dict(sorted(higth_player.items(), reverse = True))
+
+        # Gestion de la save
+        print(higth_player)
+        for testscore in higth_player.copy():
+            if score &gt; testscore:
+                higth_player[score] = display_new(score)
+                higth_player = dict(sorted(higth_player.items(), reverse=True))
+                higth_player.pop(list(higth_player)[3])
+                break
+        higth_player = dict(sorted(higth_player.items(), reverse=True))
+
+        # Écriture de la save
+        with open(&#39;./CODE/Save.pkl&#39;, &#39;wb&#39;) as f:
+            pickle.dump(higth_player, f)
+        print(higth_player)
+
+        pygame.mixer.music.load(&#34;./CODE/ASSET/music_menu.mp3&#34;)
+        pygame.mixer.music.set_volume(0.3)
+        pygame.mixer.music.play(-1)
+
+        # Lancement menu
+        choix = True
+        menu = True
+        while menu:
+            display_menu(choix)
+            for i in pygame.event.get():
+
+                if i.type == pygame.KEYDOWN:
+
+                    # Si fleche UP presser
+                    if i.key == pygame.K_UP or i.key == pygame.K_DOWN:
+                        choix = not choix
+                        pygame.mixer.Sound.play(sound_menu)
+
+                    if i.key == pygame.K_SPACE or i.key == pygame.K_RETURN:
+                        if choix:
+                            menu = False
+                            pygame.mixer.Sound.play(sound_menu2)
+                        else:
+                            pygame.quit()
+                            exit()
+
+                if i.type == pygame.QUIT:
+                    pygame.quit()
+                    exit()
+
+        # Début Partie
+
+        # Lancement de la musique
+        pygame.mixer.music.load(&#34;./CODE/ASSET/music_game.mp3&#34;)
+        pygame.mixer.music.set_volume(0.3)
+        pygame.mixer.music.play(-1)
+
+        # Fin importation
+
+        time = 0
+        score = 0
+        # Gestion du temps START
+        global start_clock
+        start_clock = pygame.time.get_ticks()
+        # Gestion de l&#39;enchainement de 3 platos
+        for i in range(5):
+            var_fin_plato = start_one_laby_game(nb_ligne, nb_colonne, score, start_clock)
+            score = var_fin_plato[0]
+            time = var_fin_plato[1]
+        print(score, time)
+        score = int(round(score - 5555.5 * time + 2000000, 0))
+        print(score, time)
+        # Fin partie
+        display_end(score)</code></pre>
+</details>
+</dd>
+<dt id="Run_game.get_input"><code class="name flex">
+<span>def <span class="ident">get_input</span></span>(<span>score) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fonction permetant de détecter les entrées faites via un périphérique par l'utilisateur.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_input(score) -&gt; str:
+    &#34;&#34;&#34;
+    Fonction permetant de détecter les entrées faites via un périphérique par l&#39;utilisateur.
+    &#34;&#34;&#34;
+    fin = False
+    name = &#34;&#34;
+
+    while not fin:
+
+        # Parcours des events
+        for i in pygame.event.get():
+
+            if i.type == pygame.KEYDOWN:
+
+                if i.key == pygame.K_a:
+                    name += &#34;A&#34;
+                if i.key == pygame.K_b:
+                    name += &#34;B&#34;
+                if i.key == pygame.K_c:
+                    name += &#34;C&#34;
+                if i.key == pygame.K_d:
+                    name += &#34;D&#34;
+                if i.key == pygame.K_e:
+                    name += &#34;E&#34;
+                if i.key == pygame.K_f:
+                    name += &#34;F&#34;
+                if i.key == pygame.K_g:
+                    name += &#34;G&#34;
+                if i.key == pygame.K_h:
+                    name += &#34;H&#34;
+                if i.key == pygame.K_i:
+                    name += &#34;I&#34;
+                if i.key == pygame.K_j:
+                    name += &#34;J&#34;
+                if i.key == pygame.K_k:
+                    name += &#34;K&#34;
+                if i.key == pygame.K_l:
+                    name += &#34;L&#34;
+                if i.key == pygame.K_m:
+                    name += &#34;M&#34;
+                if i.key == pygame.K_n:
+                    name += &#34;N&#34;
+                if i.key == pygame.K_o:
+                    name += &#34;O&#34;
+                if i.key == pygame.K_p:
+                    name += &#34;P&#34;
+                if i.key == pygame.K_q:
+                    name += &#34;Q&#34;
+                if i.key == pygame.K_r:
+                    name += &#34;R&#34;
+                if i.key == pygame.K_s:
+                    name += &#34;S&#34;
+                if i.key == pygame.K_t:
+                    name += &#34;T&#34;
+                if i.key == pygame.K_u:
+                    name += &#34;U&#34;
+                if i.key == pygame.K_v:
+                    name += &#34;V&#34;
+                if i.key == pygame.K_w:
+                    name += &#34;W&#34;
+                if i.key == pygame.K_x:
+                    name += &#34;X&#34;
+                if i.key == pygame.K_y:
+                    name += &#34;Y&#34;
+                if i.key == pygame.K_z:
+                    name += &#34;Z&#34;
+
+                if i.key == pygame.K_BACKSPACE:
+                    name = name[:-1]
+
+                if i.key == pygame.K_RETURN:
+                    fin = True
+                    break
+            if i.type == pygame.QUIT:
+                pygame.quit()
+                exit()
+
+        name = name[:10]
+        fenetre.blit(img_fond, (0, 0))
+        fenetre.blit(img_nom_resize, (fenetre.get_rect().center[0] - 370, fenetre.get_rect().center[1] - 318))
+        fenetre.blit(font2.render(&#34;Maze Breaker DELUXE&#34;, True, (255, 200, 0)), (fenetre.get_rect().center[0] - 298, fenetre.get_rect().center[1] - 300))
+
+        fenetre.blit(pygame.transform.scale(img_titre, (900, 100)), (fenetre.get_rect().center[0] - 450, fenetre.get_rect().center[1] - 67))
+        fenetre.blit(font2.render(&#34;New High Score  &#34; + str(score), True, &#34;darkblue&#34;), (fenetre.get_rect().center[0] - font2.render(&#34;New High Score  &#34; + str(score), True, &#34;gold&#34;, &#34;lightskyblue&#34;).get_rect()[2] / 2, fenetre.get_rect().center[1] - 50))
+
+        fenetre.blit(pygame.transform.scale(img_titre, (424, 100)), (fenetre.get_rect().center[0] - 212, fenetre.get_rect().center[1] + 57))
+        if name:
+            fenetre.blit(font2.render(name, True, &#34;black&#34;), (fenetre.get_rect().center[0] - font2.render(name, True, &#34;gold&#34;, &#34;lightskyblue&#34;).get_rect()[2] / 2, fenetre.get_rect().center[1] + 75))
+        else:
+            fenetre.blit(font2.render(&#34;Enter Name&#34;, True, &#34;black&#34;), (fenetre.get_rect().center[0] - font2.render(&#34;Enter Name&#34;, True, &#34;gold&#34;, &#34;lightskyblue&#34;).get_rect()[2] / 2, fenetre.get_rect().center[1] + 75))
+        pygame.display.update()
+    return name[:9]</code></pre>
+</details>
+</dd>
+<dt id="Run_game.get_wallcoord_forlaby"><code class="name flex">
+<span>def <span class="ident">get_wallcoord_forlaby</span></span>(<span>maze: object, nb_ligne: int, nb_colonne: int) ‑> list</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fonction permettant de modifier les coordonnées pour tout les murs (du à l'affichage en sprite du jeu) en retournant la liste de tout les murs modifiés.</p>
+<h2 id="retour">Retour</h2>
+<p><code>list</code> : liste de tout les nouvelles coordonnées des murs.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_wallcoord_forlaby(maze : object, nb_ligne: int, nb_colonne: int) -&gt; list:
+    &#34;&#34;&#34;
+    Fonction permettant de modifier les coordonnées pour tout les murs (du à l&#39;affichage en sprite du jeu) en retournant la liste de tout les murs modifiés.
+
+    Retour:
+        `list` : liste de tout les nouvelles coordonnées des murs.
+    &#34;&#34;&#34;
+    # Ajout des murs
+    murs = maze.get_walls()
+    new_cord = []
+
+    # Transformation des coordonées pour convenir au tableau
+    for mur in murs:
+        temp1 = 0
+        temp2 = 0
+        temp3 = 0
+        temp4 = 0
+        if mur[0][0] == 0:
+            temp1 = mur[0][0] + 1
+        else:
+            temp1 = mur[0][0] * 2 + 1
+
+        if mur[0][1] == 0:
+            temp2 = mur[0][1] + 1
+        else:
+            temp2 = mur[0][1] * 2 + 1
+
+        if mur[1][0] == 0:
+            temp3 = mur[1][0] + 1
+        else:
+            temp3 = mur[1][0] * 2 + 1
+
+        if mur[1][1] == 0:
+            temp4 = mur[1][1] + 1
+        else:
+            temp4 = mur[1][1] * 2 + 1
+
+        new_cord.append(((temp1, temp2), (temp3, temp4)))
+
+    # Création des coordonnées des nouveaux murs
+    new_murs = []
+    for mur in new_cord:
+        if mur[0][0] != mur[1][0]:
+            if mur[0][0] &lt; mur[1][0]:
+                new_murs.append((mur[0][0] + 1, mur[0][1]))
+            else:
+                new_murs.append((mur[1][0] + 1, mur[1][1]))
+        else:
+            if mur[0][1] &lt; mur[1][1]:
+                new_murs.append((mur[0][0], mur[0][1] + 1))
+            else:
+                new_murs.append((mur[1][0], mur[1][1] + 1))
+
+    for ligne in range(2, nb_ligne * 2, 2):
+        for colonne in range(2, nb_colonne * 2, 2):
+            new_murs.append((ligne, colonne))
+
+    return new_murs</code></pre>
+</details>
+</dd>
+<dt id="Run_game.start_one_laby_game"><code class="name flex">
+<span>def <span class="ident">start_one_laby_game</span></span>(<span>ligne: int, colonne: int, score: int, start_clock: int) ‑> tuple</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fonction permettant la gestion des contrôles et des collisions pendant une partie.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def start_one_laby_game(ligne: int, colonne: int, score: int, start_clock: int) -&gt; tuple:
+    &#34;&#34;&#34;
+    Fonction permettant la gestion des contrôles et des collisions pendant une partie.
+    &#34;&#34;&#34;
+    nb_ligne = ligne
+    nb_colone = colonne
+    coord_joueur = (1, 1)
+    diamond_value = 5000
+    petit_diamond_value = 2500
+
+    maze = Maze.gen_wilson(None, nb_ligne, nb_colone)
+    murs = get_wallcoord_forlaby(maze, nb_ligne, nb_colone)
+    Diamonds = addDiamond(murs, nb_ligne, nb_colone, 40, 70)
+
+    display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 2, Diamonds)
+    pygame.display.update()
+
+
+    # Mouvement de joueur
+    fin = False
+    while not fin:
+        display_score(nb_ligne, score)
+
+        # Parcours des events
+        for i in pygame.event.get():
+
+            # Si une touche presser
+            if i.type == pygame.KEYDOWN:
+
+                # Si fleche UP presser
+                if i.key == pygame.K_UP:
+                    if coord_joueur[0] != 1 and (coord_joueur[0] - 1, coord_joueur[1]) not in murs:
+                        coord_joueur = (coord_joueur[0] - 1, coord_joueur[1])
+
+                        # Gestion des diamonds
+                        if coord_joueur in Diamonds[0]:
+                            score += diamond_value
+                            Diamonds[0].pop(Diamonds[0].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+                        elif coord_joueur in Diamonds[1]:
+                            score += petit_diamond_value
+                            Diamonds[1].pop(Diamonds[1].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+
+                        # Gestion de la fin
+                        if coord_joueur == (nb_ligne * 2 - 1, nb_colone * 2 - 1):
+                            pygame.mixer.Sound.play(sound_fin)
+                            fin = True
+                            break
+
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 0, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+                    else:
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 0, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+
+                # Si fleche droite presser
+                if i.key == pygame.K_RIGHT:
+                    if coord_joueur[1] != nb_colone * 2 - 1 and (coord_joueur[0], coord_joueur[1] + 1) not in murs:
+                        coord_joueur = (coord_joueur[0], coord_joueur[1] + 1)
+
+                        # Gestion des diamonds
+                        if coord_joueur in Diamonds[0]:
+                            score += diamond_value
+                            Diamonds[0].pop(Diamonds[0].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+                        elif coord_joueur in Diamonds[1]:
+                            score += petit_diamond_value
+                            Diamonds[1].pop(Diamonds[1].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+
+                        # Gestion de la fin
+                        if coord_joueur == (nb_ligne * 2 - 1, nb_colone * 2 - 1):
+                            pygame.mixer.Sound.play(sound_fin)
+                            fin = True
+                            break
+
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 1, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+                    else:
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 1, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+
+                # Si fleche bas presser
+                if i.key == pygame.K_DOWN:
+                    if coord_joueur[0] + 1 != nb_ligne * 2 and (coord_joueur[0] + 1, coord_joueur[1]) not in murs:
+                        coord_joueur = (coord_joueur[0] + 1, coord_joueur[1])
+
+                        # Gestion des diamonds
+                        if coord_joueur in Diamonds[0]:
+                            score += diamond_value
+                            Diamonds[0].pop(Diamonds[0].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+                        elif coord_joueur in Diamonds[1]:
+                            score += petit_diamond_value
+                            Diamonds[1].pop(Diamonds[1].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+
+                        # Gestion de la fin
+                        if coord_joueur == (nb_ligne * 2 - 1, nb_colone * 2 - 1):
+                            pygame.mixer.Sound.play(sound_fin)
+                            fin = True
+                            break
+
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 2, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+                    else:
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 2, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+
+                # Si fleche gauche presser
+                if i.key == pygame.K_LEFT:
+                    if coord_joueur[1] != 1 and (coord_joueur[0], coord_joueur[1] - 1) not in murs:
+                        coord_joueur = (coord_joueur[0], coord_joueur[1] - 1)
+
+                        # Gestion des diamonds
+                        if coord_joueur in Diamonds[0]:
+                            score += diamond_value
+                            Diamonds[0].pop(Diamonds[0].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+                        elif coord_joueur in Diamonds[1]:
+                            score += petit_diamond_value
+                            Diamonds[1].pop(Diamonds[1].index(coord_joueur))
+                            pygame.mixer.Sound.play(sound_diamond)
+
+                        # Gestion de la fin
+                        if coord_joueur == (nb_ligne * 2 - 1, nb_colone * 2 - 1):
+                            pygame.mixer.Sound.play(sound_fin)
+                            fin = True
+                            break
+
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 3, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+                    else:
+                        display_laby(nb_ligne * 2, nb_colone * 2, murs, coord_joueur, 3, Diamonds)
+                        display_score(nb_ligne, score)
+                        pygame.display.update()
+
+            display_score(nb_ligne, score)
+
+        # Permet de quitter le jeu
+            if i.type == pygame.QUIT:
+                pygame.quit()
+                exit()
+
+    return (score, (pygame.time.get_ticks() - start_clock) / 1000)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="Run_game.addDiamond" href="#Run_game.addDiamond">addDiamond</a></code></li>
+<li><code><a title="Run_game.display_end" href="#Run_game.display_end">display_end</a></code></li>
+<li><code><a title="Run_game.display_laby" href="#Run_game.display_laby">display_laby</a></code></li>
+<li><code><a title="Run_game.display_menu" href="#Run_game.display_menu">display_menu</a></code></li>
+<li><code><a title="Run_game.display_new" href="#Run_game.display_new">display_new</a></code></li>
+<li><code><a title="Run_game.display_score" href="#Run_game.display_score">display_score</a></code></li>
+<li><code><a title="Run_game.game" href="#Run_game.game">game</a></code></li>
+<li><code><a title="Run_game.get_input" href="#Run_game.get_input">get_input</a></code></li>
+<li><code><a title="Run_game.get_wallcoord_forlaby" href="#Run_game.get_wallcoord_forlaby">get_wallcoord_forlaby</a></code></li>
+<li><code><a title="Run_game.start_one_laby_game" href="#Run_game.start_one_laby_game">start_one_laby_game</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
